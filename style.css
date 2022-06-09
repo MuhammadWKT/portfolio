@@ -1,0 +1,131 @@
+
+:root{
+    --main-bg-color: #6c5ce7;
+    --black-color: #000;
+    --margin: 0px;
+    --padding: 0px;
+    --white-main-color: #fff;
+    --dark-grey-color: #1e272e;
+    --light-grey-color: #747474;
+    --very-light-grey-color: #f0f0f0;
+}
+
+body{
+    margin: var(--margin);
+    padding: var(--padding);
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+ul{
+   list-style: none; 
+}
+a{
+    text-decoration: none;
+}
+
+/* units */
+/* pixels = px --> non responsive
+percentage = % -- responsive
+fractional = fr --> responsive
+view-width/view-height = vw/vh --> responsive */
+/* rem, em --> font relative units */
+/* by defaul => 1em/1rem:  16px  */
+
+#main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: var(--white-main-color);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+nav ul{
+    display: flex;
+}
+nav ul li a{
+    margin: 3px;
+    padding: 0px 22px;
+    display: flex;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #585b55;
+    letter-spacing: 1px;
+    font-size: 14px;
+    height: 40px; 
+    line-height: 43px;
+}
+
+nav ul li a:hover{
+ color: var(--white-main-color);
+ background-color: var(--main-bg-color);
+ border-radius: 5px;
+}
+.get-in-touch{
+    color: var(--dark-grey-color);
+    font-weight: 500;
+    font-size: 0.9em;
+    border-bottom: 2px solid var(--main-bg-color);
+}
+.logo-heading{
+ font-weight: 300;
+ font-size: 25px;
+ color: var(--black-color);
+}
+.name{
+font-weight: 800;
+text-decoration: underline;
+text-decoration-color: var(--main-bg-color);
+}
+
+/* Content */
+
+.content{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+    /* Figure this out! (advance) */
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+
+}
+.model{
+    width: 400px;
+    height: 400px;
+}
+.model img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+.main-text h1{
+    font-size: 50px;
+    margin: 0px 0px 10px 0px;
+    line-height: 60px;
+}
+.main-text p{
+    color: var(--light-grey-color);
+}
+.portfolio-button{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: var(--main-bg-color);
+    color: var(--white-main-color);
+}
